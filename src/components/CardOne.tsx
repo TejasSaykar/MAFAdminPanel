@@ -6,7 +6,7 @@ import { MdDelete } from 'react-icons/md';
 const CardOne = ({ item, type, fetchBlogs, fetchNews }) => {
   const navigate = useNavigate();
   const apiUrl = import.meta.env.VITE_BASE_URL;
-  const PF = 'http://localhost:8080/images/';
+  const PF = 'http://154.56.63.113:8080/images/';
   const handleUpdate = (id: string) => {
     navigate(
       `${type === 'blog' ? `/update-blog/${id}` : `/update-news/${id}`} `,
@@ -14,7 +14,7 @@ const CardOne = ({ item, type, fetchBlogs, fetchNews }) => {
   };
 
   const handleDelete = async (id: string) => {
-    const conf = confirm('Do you want delete');
+    const conf = confirm('Do you want delete this item ?');
     if (!conf) {
       return;
     }

@@ -18,7 +18,6 @@ const UpdateNews = () => {
 
   const handleUpdate = async (e: any) => {
     e.preventDefault();
-    console.log('input : ', input);
     try {
       const res = await axios.put(`${apiUrl}/api/news/update-news/${id}`, {
         title: input.title,
